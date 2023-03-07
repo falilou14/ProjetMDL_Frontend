@@ -1,18 +1,42 @@
 <!DOCTYPE html>
+<link href="https://mxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel ="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+
+<div class="card-body">
+    <h5 class="card-title text-uppercase mb-0"> Liste des clients</h5>
+    
+    <button type="button" class="btn btn-primary"><i class="fa fa-user">Ajouter un client</i></button>
+
+</div>
 <table>
+    
     <thead>
         <tr>
-            <th colspan="6">Liste des clients</th>
+            <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+            <th scope="col" class="border-0 text-uppercase font-medium">Nom Prenom</th>
+            <th scope="col" class="border-0 text-uppercase font-medium">Société</th>
+            <th scope="col" class="border-0 text-uppercase font-medium">Pays</th>
+            <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+            <th scope="col" class="border-0 text-uppercase font-medium">Création</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nom Prenom</th>
-            <th scope="col">Société</th>
-            <th scope="col">Pays</th>
-            <th scope="col">Email</th>
-            <th scope="col">Création</th>
-        </tr>
+        <td class="pl-4">1</td>
+        <td>
+            <h5 class="font-medium mb-0">Daniel Kristeen</h5>
+        </td>
+        <td>
+            <span class="text-muted">Microsoft </span>
+        </td>
+        <td>
+            <span class="text-muted">Mexique </span>
+
+        </td>
+        <td>
+            <span class="text-muted">daniel.Krist@microsoft.com </span>
+
+        </td>
+
     </tbody>
 </table>

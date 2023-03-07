@@ -1,26 +1,16 @@
 
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const app = express();
+const port = 3000;
 
 
 function main(){
-/*app.get('/', (req, res) => {
-  const currentDate = new Date();
-  console.log("page called at" + currentDate);
-  res.send('Hello World! Nous sommes le ' + currentDate);
-})*/
 
-//app.get('/', (req, res) => {
+    app.use(express.static("public"));
 
-    //res.sendFile(__dirname + "/ListeClient.html")});
-
-
-app.use(express.static("public"));
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+    app.listen(port, () => {
+        console.log(`Example app listening on port ${port}`);
+    });
 
 }
 
