@@ -10,11 +10,12 @@ app.get('/', (req, res) => {
   console.log("page called at" + currentDate);
   res.send('Hello World! Nous sommes le ' + currentDate);
 })
+
 app.get('/', (req, res) => {
 
     res.sendFile(__dirname + "/page1.html")});
 
-    
+
    // app.use(express.static("public"));
 
 
