@@ -1,10 +1,13 @@
 table,
-th ,td{
-    border: 1px solid #333;
+th{
+    border: 2px solid #333;
+}
+td{
+    border: 1px solid;
 }
 
 thead,
 tfoot {
-    background-color: wheat;
+    background-color: rgb(192, 187, 173);
     color: #fff;
 }
