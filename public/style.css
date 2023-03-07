@@ -1,6 +1,6 @@
 table,
 th{
-    border: 2px solid #333;
+    border: 3px solid #333;
 }
 td{
     border: 1px solid;
@@ -8,6 +8,6 @@ td{
 
 thead,
 tfoot {
-    background-color: rgb(192, 187, 173);
+    background-color: rgb(163, 146, 100);
     color: #fff;
 }
