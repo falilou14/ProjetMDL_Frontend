@@ -5,9 +5,19 @@ th{
 td{
     border: 1px solid;
 }
+a{
+    text-decoration: none;
+    background-color: rgb(209, 229, 191);
+}
 
 thead,
 tfoot {
     background-color: rgb(163, 146, 100);
     color: #fff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height:54vh ;
 }
