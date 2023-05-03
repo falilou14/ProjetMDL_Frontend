@@ -2,6 +2,10 @@
 <link href="https://mxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel ="stylesheet">
 <link href="style.css" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
 <body>
 <div class="card-body">
     <h3 class="card-title text-uppercase mb-0"> Liste des clients</h3>
@@ -19,135 +23,11 @@
             <th scope="col" class="border-0 text-uppercase font-medium">Création</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-        <td class="pl-4">1</td>
-        <td>
-            <h5 class="font-medium mb-0">Daniel Kristeen</h5>
-        </td>
-        <td>
-            <span class="text-muted">Microsoft </span>
-        </td>
-        <td>
-            <span class="text-muted">Mexique </span>
-
-        </td>
-        <td>
-            <span class="text-muted">daniel.Krist@microsoft.com </span>
-        </td>
-        <td>
-            <span class="text-muted">10 janv 2023</span>
-            <span class="text-muted">10:55</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="pl-4">2</td>
-        <td>
-            <h5 class="font-medium mb-0">Torrey Veum</h5>
-        </td>
-        <td>
-            <span class="text-muted">Google</span>
-        </td>
-        <td>
-            <span class="text-muted">Switzedland</span>
-
-        </td>
-        <td>
-            <span class="text-muted">torrey.veum@hotmail.com</span>
-        </td>
-        <td>
-            <span class="text-muted">01 janv 2023</span>
-            <span class="text-muted">23:12</span>
-        </td>
-    </tr>    
-
-   
-    <tr>
-        <td class="pl-4">3</td>
-        <td>
-            <h5 class="font-medium mb-0">Deh Abou</h5>
-        </td>
-        <td>
-            <span class="text-muted">Facebook</span>
-        </td>
-        <td>
-            <span class="text-muted">Senegal</span>
-
-        </td>
-        <td>
-            <span class="text-muted">abou68@gmail.com </span>
-        </td>
-        <td>
-            <span class="text-muted">05 Mars 2022</span>
-            <span class="text-muted">20:15</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="pl-4">4</td>
-        <td>
-            <h5 class="font-medium mb-0">Deh Abou</h5>
-        </td>
-        <td>
-            <span class="text-muted">Facebook</span>
-        </td>
-        <td>
-            <span class="text-muted">Senegal</span>
-
-        </td>
-        <td>
-            <span class="text-muted">abou68@gmail.com </span>
-        </td>
-        <td>
-            <span class="text-muted">05 Mars 2022</span>
-            <span class="text-muted">20:15</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="pl-4">5</td>
-        <td>
-            <h5 class="font-medium mb-0">Deh Abou</h5>
-        </td>
-        <td>
-            <span class="text-muted">Facebook</span>
-        </td>
-        <td>
-            <span class="text-muted">Senegal</span>
-
-        </td>
-        <td>
-            <span class="text-muted">abou68@gmail.com </span>
-        </td>
-        <td>
-            <span class="text-muted">05 Mars 2022</span>
-            <span class="text-muted">20:15</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="pl-4">6</td>
-        <td>
-            <h5 class="font-medium mb-0">Deh Abou</h5>
-        </td>
-        <td>
-            <span class="text-muted">Facebook</span>
-        </td>
-        <td>
-            <span class="text-muted">Senegal</span>
-
-        </td>
-        <td>
-            <span class="text-muted">abou68@gmail.com </span>
-        </td>
-        <td>
-            <span class="text-muted">05 Mars 2022</span>
-            <span class="text-muted">20:15</span>
-        </td>
-    </tr>
-
-
+    
+    <tbody id = "listeClients">
 
     </tbody>
 </table>
 </body>
+
+<script src="list.js"></script>
