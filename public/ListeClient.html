@@ -25,9 +25,32 @@
     </thead>
     
     <tbody id = "listeClients">
+     
 
     </tbody>
 </table>
+
+<div class ="tab">
+
+    <button id="prec" onclick="decrementPage()">Page Précédente</a>
+
+    <button id="suiv" onclick="incrementPage()">Page Suivante</a>
+
+
+</div>
+
+<div class="Page">
+    
+<select id="number" onchange="getNumber()">
+    <option value="10" selected>10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+</select>
+
+</div>
+
+
 </body>
 
 <script src="list.js"></script>

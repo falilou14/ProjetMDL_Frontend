@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
+  <script src ="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<script  type = "module " src="creationClients.js"></script>
+
+
 <div class="formulaire"> <!--Début des champs à remplir pour le formulaire -->
-    <form>
-      <label for ="first_Last_Name"> Nom Prenom  :</label><br>
-      <input type="text" id ="firstName" required ><br><br>
+    <form method=" post" id ="ajoutClient" onsubmit="return false">
+
+      <label for ="first"> Nom  :</label><br>
+
+      <input type="text" id ="first" required ><br><br>
+
+      <label for ="Last"> Prenom  :</label><br>
+
+      <input type="text" id ="Last" required ><br><br>
+
 
       <label for ="Société"> Société :</label><br>
-      <input type="text" id ="Société" required ><br><br>
 
-      <label for ="Pays"> Pays :</label><br>
-      <input type="text" id ="Pays" required ><br><br>
+      <input type="text" id ="company" required ><br><br>
+
+      <label for ="country"> Pays :</label><br>
+
+      <input type="text" id ="country" required ><br><br>
       
-      <label for ="emailAddress">Email</label><br>
-      <input id ="emailAddress" type="email" required><br><br>
+      <label for ="email">Email</label><br>
 
-      <label for="Date_Hour">Création</label><br>
-      <input id="Date_Hour" type="datetime" placeholder=" "
-        pattern="[0,7,6]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}"
-         required ><br><br>
-       <a href="Quiz.html"><input id="submitQuiz" type="submit" value="Do_The_Quiz"></a> <!-- soumission des informations renseignées dans le formulaire-->
+      <input id ="email" type="email" required><br><br>
+
+      
+      
+       <button  type="submit" >  Ajouter le nouveau client </button><!-- soumission des informations renseignées dans le formulaire-->
 
      
     </form>

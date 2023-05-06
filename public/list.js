@@ -2,21 +2,41 @@ var page = 1;
 var number = 10;
 
 
+function incrementPage() {
+   page++;
+   generateTabClient();
+}
+
+function decrementPage() {
+   if (page > 1) {
+      page--;
+      generateTabClient();
+   }
+}
+
+function getNumber(){
+   var choosenNumber = document.getElementById("number");
+   var valueNumber = choosenNumber.options[choosenNumber.selectedIndex].value;
+   number = valueNumber;
+   generateTabClient();
+   
+}
 
 
-function generateTabClient(){
-    
- var clients = "";
 
- 
+function generateTabClient() {
+
+   var clients = "";
 
 
- $.get("http://localhost:3001/api/customers",{ "page":  page,"number": number}, function(data){
-    data.result.forEach(user => {
 
-    var client= `<tr>
+
+   $.get("http://localhost:3001/api/customers", { "page": page, "number": number }, function (data) {
+      data.result.forEach(user => {
+
+         var client = `<tr>
     <th scope = "row" > `+ user.id + `</th>
-    <td>`+ user.first +" "+ user.last + `</td>
+    <td>`+ user.first + " " + user.last + `</td>
     <td>`+ user.company + `</td>
     <td>`+ user.country + `</td>
     <td>` + user.email + `</td>
@@ -24,14 +44,15 @@ function generateTabClient(){
     
     </tr>`;
 
-    clients = clients + client;
+         clients = clients + client;
 
 
-        
-    });
-    $("#listeClients").html(clients);
- })
+
+      });
+      $("#listeClients").html(clients);
+   })
 
 }
 
 generateTabClient();
+
