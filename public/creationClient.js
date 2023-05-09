@@ -1,5 +1,11 @@
-var url = new URL ("https/localhost:3001/api/addcustomers");
-$(document).on("submit", "#addCustomersForm", function(event){
+
+document.addEventListener("DOMContentLoaded",function(){
+
+
+
+var url = new URL ("http://localhost:3001/api/addcustomers");
+
+$(document).on("submit", "#ajoutClient", function(event){
     
 
     event.preventDefault();
@@ -37,6 +43,7 @@ $(document).on("submit", "#addCustomersForm", function(event){
 
 
 });
+
 function createClient(client){
     $.ajax({
         url : url,
@@ -60,3 +67,5 @@ function createClient(client){
 
     
 }
+
+})

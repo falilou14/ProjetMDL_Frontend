@@ -32,6 +32,7 @@ function generateTabClient() {
 
 
    $.get("http://localhost:3001/api/customers", { "page": page, "number": number }, function (data) {
+      
       data.result.forEach(user => {
 
          var client = `<tr>
