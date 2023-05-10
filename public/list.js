@@ -1,6 +1,6 @@
 var page = 1;
 var number = 10;
-var premierpage= 1;
+
 
 
 function incrementPage() {
@@ -22,7 +22,7 @@ function dernierpage()
 
 function premierpage()
 {
-   page= 2;
+   page = 1;
    generateTabClient();
 }
 
