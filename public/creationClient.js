@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 var urlMod =new URL("http://localhost:3001/api/modclient");
+
 var url = new URL ("http://localhost:3001/api/addclient");
+
 var urlRemove = new URL ("http://localhost:3001/api/delClient");
 
 
@@ -153,19 +155,13 @@ $(document).on("submit", "#removeClient", function(event){
       
   
       // vérification 
-      console.log(id,first,last,email,company,country);
-  
+      
   
       // création du client
   
       var client = {
           "id":id,
-          "email": email,
-          "first": first,
-          "last" : last,
-          "company": company,
-          "created_at" : null,
-          "country": country,
+          
       };
   
       // vérification 
