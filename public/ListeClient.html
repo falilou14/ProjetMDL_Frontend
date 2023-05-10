@@ -8,9 +8,19 @@
 
 <body>
 <div class="card-body">
-    <h3 class="card-title text-uppercase mb-0"> Liste des clients</h3>
+    
+      <h3 class="card-title text-uppercase mb-0"> Liste des clients</h3>
+
+  <div class="bouton">
     <button type="button" class="btn btn-primary"><i class="fa fa-user"><a href="http://localhost:3000/Client.html">Ajouter un client </a></i></button>
 
+    <button type="button" class="btn btn-primary" onclick=""><a href="http://localhost:3000/ModifClient.html">modifier Client </a></i></button>
+    <button type="button" class="btn btn-primary"><i class="fa fa-user">Supprimer un client </i></button>
+
+    
+
+  </div>
+  
 </div>
 <table>
     <thead>
@@ -31,10 +41,15 @@
 </table>
 
 <div class ="tab">
+    
+    <button id="suiv" onclick="premierepage()">Premier Page </a>
 
     <button id="prec" onclick="decrementPage()">Page Précédente</a>
 
     <button id="suiv" onclick="incrementPage()">Page Suivante</a>
+
+    <button id="suiv" onclick="dernierpage()">Derniere Page </a>
+
 
 
 </div>

@@ -2,23 +2,25 @@
 document.addEventListener("DOMContentLoaded",function(){
 
 
-
-var url = new URL ("http://localhost:3001/api/addcustomers");
+var urlMod =new URL("http://localhost:3001/api/modclient");
+var url = new URL ("http://localhost:3001/api/addclient");
 
 $(document).on("submit", "#ajoutClient", function(event){
     
 
-    event.preventDefault();
+  event.preventDefault();
 
 
 
     // recuperer les données du formulaire 
 
-    var first =document.getElementById("first").value;
-    var last = document.getElementById("last").value;
-    var email = document.getElementById("email").value;
-    var company = document.getElementById("company").value;
-    var country = document.getElementById("country").value;
+   // $('#nom').val();
+
+    var first =$("#first").val();
+    var last = $("#last").val();
+    var email = $("#email").val();
+    var company = $("#company").val();
+    var country = $("#country").val();
 
     // vérification 
     console.log(first,last,email,company,country);
@@ -47,6 +49,72 @@ $(document).on("submit", "#ajoutClient", function(event){
 function createClient(client){
     $.ajax({
         url : url,
+        method : "POST",
+        contentType : "application/json",
+        data : JSON.stringify(client),
+
+        success: function(){
+            $("#alert-message").attr('class','alert alert-success');
+            $("alert-message").html("client ajouté");
+
+        },
+
+        error: function(xhr){
+            $("#alert-message").attr('class','alert alert-danger');
+            $("alert-message").html(xhr.responseText);
+        }
+    });
+
+
+
+    
+}
+
+$(document).on("submit", "#modifClient", function(event){
+    
+
+    event.preventDefault();
+  
+  
+  
+      // recuperer les données du formulaire 
+  
+     // $('#nom').val();
+        var id=$("#id").val();
+      var first =$("#first").val();
+      var last = $("#last").val();
+      var email = $("#email").val();
+      var company = $("#company").val();
+      var country = $("#country").val();
+  
+      // vérification 
+      console.log(id,first,last,email,company,country);
+  
+  
+      // création du client
+  
+      var client = {
+          "id":id,
+          "email": email,
+          "first": first,
+          "last" : last,
+          "company": company,
+          "created_at" : null,
+          "country": country,
+      };
+  
+      // vérification 
+      console.log("client" , client);
+  
+      modClient(client);
+  
+  
+  });
+
+
+function modClient(client){
+    $.ajax({
+        url : urlMod,
         method : "POST",
         contentType : "application/json",
         data : JSON.stringify(client),

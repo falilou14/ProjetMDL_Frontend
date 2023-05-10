@@ -13,6 +13,17 @@ function decrementPage() {
       generateTabClient();
    }
 }
+function dernierpage()
+{
+   page=totpages;
+   generateTabClient();
+}
+
+function premierpage()
+{
+   page=1;
+   generateTabClient();
+}
 
 function getNumber(){
    var choosenNumber = document.getElementById("number");
@@ -47,7 +58,7 @@ function generateTabClient() {
 
          clients = clients + client;
 
-
+         totpages=data.totalPages;
 
       });
       $("#listeClients").html(clients);
